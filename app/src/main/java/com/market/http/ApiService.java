@@ -14,7 +14,7 @@ public interface ApiService
     /**
      * 默认的api主接口
      */
-    String BASE_URL = "http://10.0.2.2:8080/market/";
+    String BASE_URL = "http://192.168.31.102:8080/market/";
 
     @GET("home/hometopic.json")
     Observable<BannerResp> getBannerApi();
