@@ -49,6 +49,7 @@ public class MainActivity extends BaseCompatActivity
         initFragments();    //初始化fragments
 
         initNavigation();   //初始化底部导航栏
+
     }
 
     /**
