@@ -112,6 +112,7 @@ public class RetrofitHelper
                 .addConverterFactory(GsonConverterFactory.create()) //gson格式化
                 .build();
         return retrofit.create(ApiService.class);
+        //龙哥吊的一比啊
     }
 
 }
