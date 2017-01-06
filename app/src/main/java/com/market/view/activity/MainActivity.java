@@ -50,6 +50,7 @@ public class MainActivity extends BaseCompatActivity
 
         initNavigation();   //初始化底部导航栏
 
+        //打个注释 提交一次测试
     }
 
     /**
