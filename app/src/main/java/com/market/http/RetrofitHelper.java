@@ -1,12 +1,13 @@
 package com.market.http;
 
+import android.content.Context;
+
 import com.market.CosmeticMarketApp;
-import com.market.utils.CommonUtil;
+import com.market.view.activity.base.LoginActivity;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.CacheControl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -39,6 +40,7 @@ public class RetrofitHelper
                     mOkHttpClient = new OkHttpClient.Builder()
                             .retryOnConnectionFailure(true)                         //设置自动重连
                             .connectTimeout(5, TimeUnit.SECONDS)                    //5秒连接超时
+                            .addInterceptor(new UserIdInterceptor())
                             .writeTimeout(20, TimeUnit.SECONDS)                     //20秒写入超时
                             .readTimeout(20, TimeUnit.SECONDS)                      //同上
                             .build();
@@ -47,48 +49,21 @@ public class RetrofitHelper
         }
     }
 
-    /**
-     * 为okhttp添加缓存，这里是考虑到服务器不支持缓存时，从而让okhttp支持缓存
-     */
-    private static class CacheInterceptor implements Interceptor
+    private static class UserIdInterceptor implements Interceptor
     {
         @Override
         public Response intercept(Chain chain) throws IOException
         {
-
-            // 有网络时 设置缓存超时时间1个小时
-            int maxAge = 60 * 60;
-            // 无网络时，设置超时为1天
-            int maxStale = 60 * 60 * 24;
             Request request = chain.request();
-            if (CommonUtil.isNetworkAvailable(CosmeticMarketApp.newInstance()))
-            {
-                //有网络时只从网络获取
-                request = request.newBuilder()
-                        .cacheControl(CacheControl.FORCE_NETWORK)
-                        .build();
-            } else
-            {
-                //无网络时只从缓存中读取
-                request = request.newBuilder()
-                        .cacheControl(CacheControl.FORCE_CACHE)
-                        .build();
-            }
-            Response response = chain.proceed(request);
-            if (CommonUtil.isNetworkAvailable(CosmeticMarketApp.newInstance()))
-            {
-                response = response.newBuilder()
-                        .removeHeader("Pragma")
-                        .header("Cache-Control", "public, max-age=" + maxAge)
-                        .build();
-            } else
-            {
-                response = response.newBuilder()
-                        .removeHeader("Pragma")
-                        .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
-                        .build();
-            }
-            return response;
+
+            String uid = CosmeticMarketApp.newInstance()
+                    .getSharedPreferences(LoginActivity.TEXT, Context.MODE_PRIVATE)
+                    .getString(LoginActivity.USERId_LOGIN, "");
+            request = request.newBuilder()
+                    .addHeader("userid", uid)
+                    .build();
+
+            return chain.proceed(request);
         }
     }
 
