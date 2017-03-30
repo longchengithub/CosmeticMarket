@@ -109,7 +109,6 @@ public class GuideActivity extends BaseCompatActivity
                 View guideLogin = View.inflate(GuideActivity.this, R.layout.last_guide_pager, null);
                 View tv_login = guideLogin.findViewById(R.id.guide_login);
                 tv_login.setOnClickListener(v -> {
-                    //TODO 为了测试 默认永远属于第一次打开应用 进引导页面
                     startActivity(new Intent(GuideActivity.this, MainActivity.class));
                     finish();
                 });

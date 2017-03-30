@@ -9,14 +9,13 @@ import java.util.List;
 public class BannerResp
 {
 
-
     /**
-     * data : [{"id":"1","pic":"images/banner.png","title":"专题活动名称"},{"id":"2","pic":"images/banner1.png","title":"专题活动名称"},{"id":"3","pic":"images/banner2.png","title":"专题活动名称"},{"id":"4","pic":"images/banner3.png","title":"专题活动名称"},{"id":"5","pic":"images/banner4.png","title":"专题活动名称"}]
+     * homeTopic : [{"id":130,"pic":"/images/home/topic1.jpg","title":"活动"},{"id":131,"pic":"/images/home/topic2.jpg","title":"活动"},{"id":133,"pic":"/images/home/topic4.jpg","title":"活动"},{"id":136,"pic":"/images/home/topic7.jpg","title":"活动"},{"id":137,"pic":"/images/home/topic8.jpg","title":"hongdong"}]
      * response : home
      */
 
     private String response;
-    private List<DataBean> data;
+    private List<HomeTopicBean> homeTopic;
 
     public String getResponse()
     {
@@ -28,34 +27,34 @@ public class BannerResp
         this.response = response;
     }
 
-    public List<DataBean> getData()
+    public List<HomeTopicBean> getHomeTopic()
     {
-        return data;
+        return homeTopic;
     }
 
-    public void setData(List<DataBean> data)
+    public void setHomeTopic(List<HomeTopicBean> homeTopic)
     {
-        this.data = data;
+        this.homeTopic = homeTopic;
     }
 
-    public static class DataBean
+    public static class HomeTopicBean
     {
         /**
-         * id : 1
-         * pic : images/banner.png
-         * title : 专题活动名称
+         * id : 130
+         * pic : /images/home/topic1.jpg
+         * title : 活动
          */
 
-        private String id;
+        private int id;
         private String pic;
         private String title;
 
-        public String getId()
+        public int getId()
         {
             return id;
         }
 
-        public void setId(String id)
+        public void setId(int id)
         {
             this.id = id;
         }

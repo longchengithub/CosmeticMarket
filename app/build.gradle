@@ -64,6 +64,7 @@ dependencies {
     //ButterKnife黄油刀注解控件
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.5'
     //Glide图片加载库
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
@@ -77,4 +78,11 @@ dependencies {
     compile 'org.greenrobot:greendao:3.2.0'
     //recyclerHelper
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.7.0'
+    //跑马灯文本
+    compile 'com.gongwen:marqueelibrary:1.0.3'
+    //朱李星的第三方圆形imageView
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    //黄涛的下拉刷新的控件
+    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    compile project(':library')
 }

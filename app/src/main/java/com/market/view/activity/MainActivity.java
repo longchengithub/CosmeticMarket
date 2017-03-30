@@ -4,7 +4,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationItem;
 import com.luseen.luseenbottomnavigation.BottomNavigation.BottomNavigationView;
@@ -31,6 +33,8 @@ public class MainActivity extends BaseCompatActivity
     @BindView(R.id.main_bottom_navigation)
     BottomNavigationView mBottomNavigation;
 
+    private long exitTime;
+
     @Override
     protected void initToolBar()
     {
@@ -50,6 +54,14 @@ public class MainActivity extends BaseCompatActivity
 
         initNavigation();   //初始化底部导航栏
 
+        //GreenDao 查询操作
+//        CarStoreDao carStoreDao = CosmeticMarketApp.getDaoSession(this).getCarStoreDao();
+//        List<CarStore> carStores = carStoreDao.loadAll();
+//        for (int i = 0; i < carStores.size(); i++)
+//        {
+//            String s = carStores.get(i).getProduct_detail().toString();
+//            Log.d("MainActivity", s);
+//        }
     }
 
     /**
@@ -98,7 +110,16 @@ public class MainActivity extends BaseCompatActivity
         showFragment(0);
     }
 
-    private void showFragment(int index)
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        int id = getIntent().getIntExtra("id", 10);
+        if (id == 0)
+            showFragment(id);
+    }
+
+    public void showFragment(int index)
     {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -110,6 +131,38 @@ public class MainActivity extends BaseCompatActivity
         transaction.hide(mFragments.get(preIndex)).show(mFragments.get(index)).commit();
 
         preIndex = index;
+    }
+
+    /**
+     * @param keyCode
+     * @param event
+     * @return
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            exitApp();
+        }
+        return true;
+    }
+
+
+    /**
+     * 双击退出App
+     */
+    private void exitApp()
+    {
+
+        if (System.currentTimeMillis() - exitTime > 2000)
+        {
+            Toast.makeText(this, ("再按一次退出"), Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else
+        {
+            finish();
+        }
     }
 
 }
