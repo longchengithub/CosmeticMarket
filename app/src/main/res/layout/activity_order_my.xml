@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+   <include layout="@layout/activity_order_base"/>
+
+   <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/framelayout_order_details">
+      <ListView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:id="@+id/order_listview"></ListView>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:id="@+id/empty_order"
+          android:orientation="vertical">
+         <TextView
+             android:id="@+id/iv_no_order"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableTop="@drawable/neirong_haimeidingdan"
+             android:text="亲，你还没有订单哦！"
+             />
+         <TextView
+             android:clickable="true"
+             android:paddingBottom="5dp"
+             android:paddingTop="5dp"
+             android:paddingLeft="20dp"
+             android:paddingRight="20dp"
+             android:layout_marginTop="5dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/selector_squre_order"
+             android:id="@+id/goto_shop"
+             android:text="去逛逛"
+             />
+      </LinearLayout>
+
+</FrameLayout>
+
+</LinearLayout>

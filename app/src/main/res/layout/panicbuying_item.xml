@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/iv_ceshi"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="700dp"
+        android:layout_height="150dp"
+        android:src="@drawable/banner1"/>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/iv_ceshi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textSize="20dp"
+        android:text="　　这是什么鬼东西我不懂哈哈哈哈哈哈哈哈哈宝宝心里苦宝宝心里宝宝心里苦宝宝宝宝"
+        />
+</RelativeLayout>

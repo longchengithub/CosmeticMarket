@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shop_chanpinlan"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="6dp"
+                android:src="@drawable/shop_fanhui"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="店铺优惠券"
+                android:textColor="#fff"
+                android:textSize="25dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shop_bg_receivertime_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="可使用"
+            android:textColor="@color/shop_color_textcolor_selector"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shop_bg_receivertime_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="已使用"
+            android:textColor="@color/shop_color_textcolor_selector"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shop_bg_receivertime_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="已过期"
+            android:textColor="@color/shop_color_textcolor_selector"
+            android:textSize="22dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/shop_waikuang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop_youhquan"/>
+            <TextView
+              android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥50"
+                android:textSize="16dp"
+                android:textColor="@color/red"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全场通用"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满499.00元使用"
+                android:textColor="#66666666"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:textColor="#66666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017.01.10-2017.02.20有效"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/shop_waikuang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop_youhquan"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥100"
+                android:textSize="16dp"
+                android:textColor="@color/red"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仅兰芝旗舰店可以用"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满999.00元使用"
+                android:textColor="#66666666"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:textColor="#66666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017.01.10-2017.02.20有效"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/shop_waikuang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop_youhquan"/>
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥150"
+                android:textSize="16dp"
+                android:textColor="@color/red"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="28dp"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="仅高斯旗舰店可以用"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满1499.00元使用"
+                android:textColor="#66666666"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:textColor="#66666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017.01.10-2017.02.20有效"
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

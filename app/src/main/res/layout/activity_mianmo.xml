@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_mianmo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#427161"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:drawableTop="@drawable/nav_return"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="面部の护理"
+                android:textColor="@color/white"
+                android:textSize="@dimen/normal_textSize_20"/>
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:drawableTop="@drawable/nav_button_message_nor"
+                android:gravity="center"
+                android:text="消息"
+                android:textColor="#fff"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mianmo"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/gray"
+            app:tabSelectedTextColor="@color/gray"
+            app:tabTextColor="@color/dark"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_mianmo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

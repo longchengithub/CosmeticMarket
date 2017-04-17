@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.market.view.activity.base.LoginActivity">
+
+    <LinearLayout
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="login_goBack"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="返回" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:padding="5dp"
+        android:id="@+id/container2"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:scaleX="2"
+        android:scaleY="2"
+        android:id="@+id/login_after"
+        android:src="@drawable/iv_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp">
+    </ImageView>
+        <RelativeLayout
+            android:layout_marginTop="55dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:clickable="true"
+                android:id="@+id/iv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/register" />
+
+            <ImageView
+                android:id="@+id/bt_toblack"
+                android:clickable="true"
+                android:layout_marginLeft="180dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sign"
+                android:onClick="click_register_login"
+                android:layout_alignTop="@+id/iv_register" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="90dp"
+                android:layout_alignBottom="@+id/loginOrsign"
+                android:src="@drawable/phone"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_imageView" />
+            <EditText
+                android:background="@null"
+                android:hint="手机号/Tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/register_imageView"
+                android:layout_marginStart="31dp"
+                android:padding="5dp"
+                android:id="@+id/register_editText" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="90dp"
+                android:layout_alignBottom="@+id/loginOrsign"
+                android:src="@drawable/password"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_password" />
+            <EditText
+                android:background="@null"
+                android:password="true"
+                android:hint="密码/Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/register_password"
+                android:layout_marginStart="31dp"
+                android:padding="5dp"
+                android:id="@+id/et_register_password" />
+        </RelativeLayout>
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:onClick="click_register_register"
+            android:clickable="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/lijizhuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:text="注册即表示我同意和色条款内容"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/iv_goods_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin"
+                android:src="@drawable/shang_pin_1"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@id/iv_goods_pic"
+                    android:text="植物精华液"
+                    android:textSize="@dimen/text_size"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="￥100"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/title_size"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100ml"
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/margin"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200ml"
+
+                        />
+                    <TextView
+                        android:layout_marginLeft="@dimen/margin"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300ml"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X1"
+                        android:layout_marginRight="20dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_marginTop="@dimen/margin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/green"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            style="@style/LinearLayout_order_item_style"
+            >
+
+            <TextView
+                style="@style/TextView_1_order_style"
+                android:text="配送方式"
+                />
+
+            <TextView
+                style="@style/TextView_2_order_style"
+                android:text="快递免邮"
+                android:drawableRight="@drawable/shezhi"
+                android:id="@+id/send_mode"/>
+        </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGreen"></View>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="买家留言:"
+                android:textSize="@dimen/text_size"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="填选本次交易的说明"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGreen"></View>
+        <LinearLayout
+        style="@style/LinearLayout_order_item_style"
+        >
+
+        <TextView
+            style="@style/TextView_1_order_style"
+            android:text="发票抬头"
+            />
+
+        <TextView
+            style="@style/TextView_2_order_style"
+            android:text="明细（电子）-个人"
+            android:drawableRight="@drawable/shezhi"
+            android:id="@+id/tai_tou"/>
+    </LinearLayout>
+        <View
+            android:layout_marginTop="@dimen/margin"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGreen"></View>
+        <LinearLayout
+            style="@style/LinearLayout_order_item_style"
+            >
+
+            <TextView
+                style="@style/TextView_1_order_style"
+                android:text="共一件商品"
+                />
+
+            <TextView
+                style="@style/TextView_2_order_style"
+                android:text="小计:￥200"
+                android:drawableRight="@drawable/shezhi"
+                android:id="@+id/subtotal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

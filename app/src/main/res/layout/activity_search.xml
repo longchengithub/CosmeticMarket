@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.market.view.activity.SearchActivity">
+
+    <include layout="@layout/fragment_search_head"/>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeee"
+        app:tabIndicatorColor="#FFB72C"
+        app:tabIndicatorHeight="4dp"
+        app:tabSelectedTextColor="#DDB72C"
+        app:tabTextAppearance="@style/TextAppearance.Design.Tab"
+        app:tabTextColor="#6B7DC3"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/result_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

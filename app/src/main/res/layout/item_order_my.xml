@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shpe_squre_order_white">
+   <ImageView
+       android:layout_gravity="center"
+       android:layout_width="100dp"
+       android:layout_height="100dp"
+       android:id="@+id/iv_pro"
+       android:src="@drawable/shang_pin_1"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/ding_dan_bian_hao"
+        android:text="订单编号:123456789"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ding_dan_zong_e"
+            android:text="订单总额:5000"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/margin"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:text="状态：未确认"
+            android:id="@+id/zhuang_tai"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/neirong_jinru"/>
+</LinearLayout>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:id="@+id/shi_jian"
+        android:text="2017/1/32  12:12:12"/>
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_sing1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/singleproduct1"
+        />
+    <TextView
+        android:id="@+id/tv_sing1"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="258dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="曰 风 插 画\n美 食 手 账"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/tv_sing2"
+        android:layout_marginLeft="258dp"
+        android:layout_marginTop="65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="插 画 表 现\n曰 式 美 食\n体 验 异 国\n生 活 美 学"/>
+
+    <ImageView
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="310dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kuang"
+        />
+</FrameLayout>

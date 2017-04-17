@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/neirong_xinzeng"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/daohang_fanhui"
+        android:drawablePadding="5dp"
+        android:text="返回"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地址管理"
+        android:textColor="@color/white"
+        android:textSize="@dimen/normal_textSize_20"/>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/rippleview"
+        android:visibility="invisible"
+        android:layout_alignParentRight="true"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        rv_centered="true">
+    <TextView
+        android:id="@+id/tv_addAddress"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新增地址"
+        android:padding = "10dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
+    </com.andexert.library.RippleView>
+</RelativeLayout>
